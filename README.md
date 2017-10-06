@@ -1,9 +1,8 @@
 [![Gitter](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/vaadin-flow/Lobby#?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 
-# Skeleton Starter for Vaadin Flow
+# Fow Deep Dive
 
-This project can be used as a starting point to create your own Vaadin Flow application.
-It has the necessary dependencies and files to get you started. 
+A simple project based on Skeleton Starter for Vaadin Flow (https://github.com/vaadin/skeleton-starter-flow) 
 
 Import it to the IDE of your choice as a Maven project.
 
