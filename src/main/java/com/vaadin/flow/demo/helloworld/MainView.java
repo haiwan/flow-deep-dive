@@ -15,9 +15,16 @@
  */
 package com.vaadin.flow.demo.helloworld;
 
+import com.vaadin.flow.demo.helloworld.card.CardMakerTemplate;
+import com.vaadin.flow.demo.helloworld.user.UserView;
+import com.vaadin.flow.router.View;
 import com.vaadin.router.Route;
+import com.vaadin.router.RouterLayout;
+import com.vaadin.router.RouterLink;
 import com.vaadin.ui.button.Button;
 import com.vaadin.ui.common.HtmlImport;
+import com.vaadin.ui.html.Div;
+import com.vaadin.ui.html.H1;
 import com.vaadin.ui.layout.VerticalLayout;
 
 /**
@@ -25,14 +32,14 @@ import com.vaadin.ui.layout.VerticalLayout;
  */
 @HtmlImport("frontend://styles.html")
 @Route("")
-public class MainView extends VerticalLayout {
+public class MainView extends VerticalLayout implements RouterLayout{
 
     public MainView() {
-        ExampleTemplate template = new ExampleTemplate();
-
-        Button button =  new Button("Click me", event -> template.setValue("Clicked!"));
-
-        add(button, template);
+        add(new H1("Flow Deep Dive"));
+        Div naviBar = new Div();
+        naviBar.add(new RouterLink("User", UserView.class));
+        naviBar.add(new RouterLink("Card", CardMakerTemplate.class));
+        add(naviBar);
     }
 
 }
